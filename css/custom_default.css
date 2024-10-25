@@ -116,7 +116,6 @@ body,
 #main,
 #footer,
 #searchbox-panel {
-    font-family: "Open sans" sans-serif;
     background: transparent;
     margin-top: 0;
     padding: 0;
@@ -125,7 +124,7 @@ body,
 .ui-widget,
 legend,
 .search-button {
-    font-family: "Times" !important;
+    font-family: "Open sans" sans-serif !important;
 }
 #header,
 #headervid,
