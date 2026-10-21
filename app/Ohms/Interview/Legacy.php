@@ -27,13 +27,13 @@ class Legacy
                     foreach (libxml_get_errors() as $error) {
                         $error_msg .= "\t" . $error->message;
                     }
-                    throw new Exception($error_msg);
+                    throw new \Exception($error_msg);
                 }
             } else {
-                throw new Exception("Invalid LegacyCacheFile.");
+                throw new \Exception("Invalid LegacyCacheFile.");
             }
         } else {
-            throw new Exception("Initialization requires valid LegacyCacheFile.");
+            throw new \Exception("Initialization requires valid LegacyCacheFile.");
         }
 
         $this->data = array(
@@ -83,7 +83,7 @@ class Legacy
         foreach ($interviewer_info as $part) {
             $pieces[] = $part;
         }
-        $this->data['interviewer'] = implode($pieces, '');
+        $this->data['interviewer'] = implode('', $pieces);
         $this->data['viewerjs'] = 'legacy';
         $this->data['playername'] = 'legacy';
 
